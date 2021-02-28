@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	fmt.Println("Hello golang from docker!")
+	fmt.Println("Hello World")
+	fmt.Print(time.Now())
 }
