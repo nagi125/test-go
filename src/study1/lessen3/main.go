@@ -22,4 +22,34 @@ func main() {
 	// 型を揃えれば計算可能
 	fmt.Println(i + int(i2))
 
+
+	// 浮動小数点型
+	var fl64 float64 = 2.4
+	fmt.Println(fl64)
+
+	// 自動で64bitになる
+	fl := 3.2
+	fmt.Println(fl64 + fl)
+	fmt.Printf("%T, %T\n", fl64, fl)
+
+	var fl32 float32 = 1.2
+	fmt.Printf("%T\n", fl32)
+
+	// 型変換
+	fmt.Printf("%T\n", float64(fl32))
+
+	// 無限
+	zero := 0.0
+	pinf := 1.0 / zero
+	fmt.Println(pinf)
+
+	// -無限
+	ninf := -1.0 / zero
+	fmt.Println(ninf)
+
+	// 非数
+	nan := zero / zero
+	fmt.Println(nan)
+
+
 }
