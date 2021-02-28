@@ -4,5 +4,3 @@ ENV TZ Asia/Tokyo
 ENV LANG ja_JP.UTF-8
 
 WORKDIR /go/src/app
-
-RUN go get -u github.com/cosmtrek/air
