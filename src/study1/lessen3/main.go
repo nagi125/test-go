@@ -108,4 +108,38 @@ func main() {
 	fmt.Println(string(c))
 
 
+
+	// 配列型(個数もセットで型になっている)
+	// 可変長にしたい場合は後述のスライスを利用する
+	var arr1 [3]int
+	fmt.Println(arr1)
+	fmt.Printf("%T\n", arr1)
+
+	var arr2 [3]string = [3]string{"A", "B"}
+	fmt.Println(arr2)
+
+	arr3 := [3]int{1, 2, 3}
+	fmt.Println(arr3)
+
+	// 要素数を自動でカウントしてくれる
+	arr4 := [...]string{"C", "D"}
+	fmt.Println(arr4)
+	fmt.Printf("%T\n", arr4)
+
+	// 値の取り出し
+	fmt.Println(arr2[0])
+
+	// 配列の更新
+	arr2[2] = "C"
+	fmt.Println(arr2)
+
+	// 要素数が違う場合は違う型となりエラーとなる
+	// var arr5 [4]int
+	// arr5 = arr1
+
+	// 要素数を調べる
+	fmt.Println(len(arr1))
+
+
+
 }
