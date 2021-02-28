@@ -95,4 +95,17 @@ func main() {
 
 
 
+	// byte型
+	byteA := []byte{72, 73}
+	fmt.Println(byteA);
+
+	// 文字列に変換
+	fmt.Println(string(byteA))
+
+	// 文字列をbyteの配列に変換
+	c := []byte("HI")
+	fmt.Println(c)
+	fmt.Println(string(c))
+
+
 }
