@@ -3,11 +3,9 @@ services:
   app-go:
     container_name: app-go
     build:
-      context: ./.docker/app
+      context: .docker/go
       dockerfile: Dockerfile
-    environment:
-      LANG: 'ja_JP.UTF-8'
-      TZ: 'Asia/Tokyo'
     volumes:
-      - ./app/:/go/src/app
+      - ./src/:/go/src/app
     tty: true
+    command: air -c .air.toml

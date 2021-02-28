@@ -1,6 +1,8 @@
 FROM golang:1.16-buster
 
 ENV TZ Asia/Tokyo
+ENV LANG ja_JP.UTF-8
 
 WORKDIR /go/src/app
-ADD . /go/src/app
+
+RUN go get -u github.com/cosmtrek/air
