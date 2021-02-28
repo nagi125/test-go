@@ -18,6 +18,15 @@ func Later() func(string) string {
 	}
 }
 
+// ジェネレーターの実装
+func integers() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+
 func main() {
 	// 無名関数
 	f := func(x int, y int) int {
@@ -36,5 +45,19 @@ func main() {
 	// クロージャー
 	f3 := Later()
 	fmt.Println(f3("Hello"))
+
+
+	// ジェネレーター
+	ints := integers()
+
+	fmt.Println(ints())
+	fmt.Println(ints())
+	fmt.Println(ints())
+	fmt.Println(ints())
+
+	otherInts := integers()
+	fmt.Println(otherInts())
+	fmt.Println(otherInts())
+	fmt.Println(otherInts())
 
 }
