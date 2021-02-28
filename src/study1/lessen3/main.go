@@ -23,6 +23,7 @@ func main() {
 	fmt.Println(i + int(i2))
 
 
+
 	// 浮動小数点型
 	var fl64 float64 = 2.4
 	fmt.Println(fl64)
@@ -51,13 +52,25 @@ func main() {
 	nan := zero / zero
 	fmt.Println(nan)
 
+
+
 	// uint型
 	var u8 uint = 255
 	fmt.Println(u8)
 
+
+
 	// 複素数型
 	var c64 complex64 = -5 + 12i
 	fmt.Println(c64)
+
+
+
+	// 論理値型
+	var t, f bool = true, false
+	fmt.Println(t, f)
+
+	
 
 
 }
