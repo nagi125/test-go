@@ -142,4 +142,20 @@ func main() {
 
 
 
+	// interface型(全ての型が入る)
+	var x interface{}
+	fmt.Println(x)
+
+	x = 1
+	fmt.Println(x)
+
+	x = 3.14
+	fmt.Println(x)
+
+	x = "A"
+	fmt.Println(x)
+
+	x = [3]int{1, 2, 3}
+	fmt.Println(x)
+
 }
