@@ -70,7 +70,29 @@ func main() {
 	var t, f bool = true, false
 	fmt.Println(t, f)
 
-	
+
+
+	// 文字列型
+	var s string = "Hello Golang"
+	fmt.Println(s)
+	fmt.Printf("%T\n", s)
+
+	var si string = "300"
+	fmt.Println(si)
+	fmt.Printf("%T\n", si)
+
+	// 複数行表現
+	fmt.Println(`test
+	test
+		test`)
+
+	// "を文字列として扱いたい場合
+	fmt.Println("\"")
+	fmt.Println(`"`)
+
+	// 文字列はByte配列の集まり
+	fmt.Println(string(s[0]))
+
 
 
 }
