@@ -81,5 +81,19 @@ func main() {
 	default:
 		fmt.Println("I don't know")
 	}
+	
+	// Switch型判定サンプル
+	var x interface{} = 100
+
+	switch x.(type) {
+	case int:
+		fmt.Println("int")
+	case string:
+		fmt.Println("string")
+	default:
+		fmt.Println("I don't know")
+	}
+
+
 
 }
