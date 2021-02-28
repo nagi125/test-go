@@ -1,28 +1,13 @@
 version: '3'
 services:
-  nginx:
-    container_name: nginx
-    build: ./.docker/nginx
-    ports:
-      - 80:80
-    volumes:
-      - ./:/go/src/app
-    tty: true
-    depends_on:
-      - app
-
-  app:
-    container_name: app
+  app-go:
+    container_name: app-go
     build:
-      context: ./
+      context: ./.docker/app
       dockerfile: Dockerfile
     environment:
       LANG: 'ja_JP.UTF-8'
       TZ: 'Asia/Tokyo'
-      PORT: '8080'
     volumes:
-      - ./:/go/src/app
-    expose:
-      - 8080
+      - ./app/:/go/src/app
     tty: true
-    command: go run main.go
