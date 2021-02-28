@@ -51,5 +51,13 @@ func main() {
 	nan := zero / zero
 	fmt.Println(nan)
 
+	// uint型
+	var u8 uint = 255
+	fmt.Println(u8)
+
+	// 複素数型
+	var c64 complex64 = -5 + 12i
+	fmt.Println(c64)
+
 
 }
