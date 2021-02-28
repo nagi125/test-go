@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 // 型
 func main() {
@@ -157,5 +160,15 @@ func main() {
 
 	x = [3]int{1, 2, 3}
 	fmt.Println(x)
+
+
+	// 型変換サンプル
+	var s2 string = "100"
+	fmt.Printf("s = %T\n", s2)
+
+	// 文字列を数値に変換
+	i10, _ := strconv.Atoi(s2)
+	fmt.Println(i10)
+	fmt.Printf("i10 = %T\n", i10)
 
 }
