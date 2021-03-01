@@ -24,4 +24,11 @@ func main() {
 	s5 := []int{1, 2, 3}
 	s5 = append(s5, 4)
 	fmt.Println(s5)
+
+	// コピー
+	s6 := []int{1, 2, 3, 4, 5}
+	s7 := []int{10, 11}
+
+	n  := copy(s6, s7)
+	fmt.Println(n, s6, s7)
 }
