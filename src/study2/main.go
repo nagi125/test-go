@@ -2,6 +2,21 @@ package main
 
 import "fmt"
 
+func pow(a [3]int) {
+
+	for i, v := range a {
+		a[i] = v * v
+	}
+	return
+}
+
+// スライスでは参照渡しとなる
+func pow2(a []int) {
+	for i, v := range a {
+		a[i] = v * v
+	}
+}
+
 func main() {
 
 	// スライスサンプル
@@ -28,7 +43,26 @@ func main() {
 	// コピー
 	s6 := []int{1, 2, 3, 4, 5}
 	s7 := []int{10, 11}
-
 	n  := copy(s6, s7)
 	fmt.Println(n, s6, s7)
+
+	// 値渡し aの値に変化はない
+	a1 := [3]int{1, 2, 3}
+	pow(a1)
+	fmt.Println(a1)
+
+	// 参照渡し aの値は変化する
+	a2 := []int{1, 2, 3}
+	pow2(a2)
+	fmt.Println(a2)
+
+	// 配列型とスライスの違い
+	// スライスの場合は初期値がnilである
+	var (
+		a [3]int
+		s []int
+	)
+	fmt.Println(a)
+	fmt.Println(s == nil)
+
 }
