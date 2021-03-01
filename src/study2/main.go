@@ -17,6 +17,15 @@ func pow2(a []int) {
 	}
 }
 
+// ポインタサンプル
+func pow3(p *[3]int) {
+	i := 0
+	for i < 3 {
+		(*p)[i] = (*p)[i] * (*p)[i]
+		i++
+	}
+}
+
 func main() {
 
 	// スライスサンプル
@@ -78,5 +87,14 @@ func main() {
 		3: "Jiro",
 	}
 	fmt.Println(m2)
+
+
+	// ポインタサンプル
+	var p *int
+	fmt.Println(p == nil)
+
+	p1 := &[3]int{1, 2, 3}
+	pow3(p1)
+	fmt.Println(p1)
 
 }
